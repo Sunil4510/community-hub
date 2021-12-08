@@ -5,7 +5,7 @@ lang: en-US
 
 # {{ $frontmatter.title }}
 
-You can see how the fee is calculated and deducted [here](../../users/fees-2.0.md).
+You can see how the fee is calculated and deducted [here](https://optimismhelp.zendesk.com/hc/en-us/articles/4411895794715-Transaction-Fees).
 
 ## For backend developers:
 - You must send your transaction with a tx.gasPrice that is greater than or equal to the sequencer's l2 gas price. You can read this value from the Sequencer by querying the `OVM_GasPriceOracle` contract  (`OVM_GasPriceOracle.gasPrice`) or by simply making an RPC query to `eth_gasPrice`.  If you don't specify your `gasPrice` as an override when sending a transaction , `ethers` by default queries `eth_gasPrice` which will return the lowest acceptable L2 gas price.
