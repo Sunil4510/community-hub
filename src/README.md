@@ -14,7 +14,7 @@ You can see the documentation table of contents on the left sidebar.
 
 | What do you want to do?            | You should read                   |
 | ---------------------------------- | --------------------------------- |
-| Use apps on Optimistic Ethereum    | **User Docs**                     |
+| Use apps on Optimistic Ethereum    | [**User Docs**](http://help.optimism.io)          |
 | Administer operations for an app   | The above plus **Infrastructure** |
 | Develop an app                     | The above plus **Developer Docs** |
 | Understand why this is safe and cheap | **Protocol Specs**             |
