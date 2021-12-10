@@ -91,7 +91,6 @@ module.exports = {
               sidebarDepth: 0,
             },
             '/docs/developers/util.md',
-            '/docs/developers/talks.md',
             '/docs/developers/known-issues.md',
           ],
           collapsable: false,
