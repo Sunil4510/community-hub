@@ -1,5 +1,5 @@
 ---
-title: Transaction Fees for Developers
+title: Transaction Fees on L2
 lang: en-US
 ---
 
@@ -20,13 +20,13 @@ Every Optimistic Ethereum transaction has two costs:
 
    - The transaction's call data, because that call data has to be written on L1 as part of publishing the transaction. [Call data costs four gas for bytes containing zero, sixteen gas for bytes containing any other value](https://eips.ethereum.org/EIPS/eip-2028).
 
-   The exact function is `l1GasPrice * 1.5 * (2750 + 16*nonzeroBytes + 4*zeroBytes)`. 
+   The exact function is `l1GasPrice * 1.5 * (2750 + 16*nonzeroBytes + 4*zeroBytes)`.
 
 
 For example, lets look at [this transaction](https://kovan-optimistic.etherscan.io/tx/0xcf2e2f7f7088e4332a2b5369f85b1bafa8a8a007122e228d90778a1d14c41286). The **L2 execution fee** is the gas used, `195,057`, times the l2 gas price at the time, which was 0.001 gwei. In other words, approximately 195 gwei. The **L1 security fee**, on the other hand, is based on a gas usage of of `1.5 * (2750 + 16*11 + 4*25)`, or 4539 gas. At the L1 gas price at the time, 150 gwei, this costs 680,850 gwei, about 3500 times the **L2 execution fee**.
 
-::: tip 
-This transaction is typical. In almost all cases **L2 execution fee** is negligible compared to the **L1 security fee**. 
+::: tip
+This transaction is typical. In almost all cases **L2 execution fee** is negligible compared to the **L1 security fee**.
 :::
 
 
@@ -61,7 +61,7 @@ This transaction is typical. In almost all cases **L2 execution fee** is negligi
 
 - You should *not* allow users to change their `tx.gasPrice`
    - If they lower it, their transaction will get reverted
-   - If they increase it, they will get their transaction included immediately (same as with the  
+   - If they increase it, they will get their transaction included immediately (same as with the
      correct price) but at a higher cost
 - Users are welcome to change their `tx.gasLimit` as it functions exactly like on L1
 - You can show the math :
